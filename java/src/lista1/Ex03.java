@@ -29,6 +29,8 @@ public class Ex03 {
 		default:
 			System.out.printf("Número inválido!");
 		}
+		
+		ler.close();
 	}
 
 }

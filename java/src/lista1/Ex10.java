@@ -26,6 +26,9 @@ public class Ex10 {
 		} else {
 			System.out.printf("Os números são identicos");
 		}
+		
+		ler.close();
+		
 	}
 
 }

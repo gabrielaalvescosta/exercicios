@@ -23,6 +23,9 @@ public class Ex08 {
 		} else {
 			System.out.printf("O número " + num2 + " é maior.", num2);
 		}
+		
+		ler.close();
+		
 	}
 
 }

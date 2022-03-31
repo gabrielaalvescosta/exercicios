@@ -26,6 +26,8 @@ public class Ex02 {
 			System.out.printf("Seu imc é %1f. Portanto, você está acima do peso", imc);
 		}
 		
+		ler.close();
+		
 	}
 
 }

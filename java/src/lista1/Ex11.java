@@ -21,6 +21,8 @@ public class Ex11 {
 		if (area > 100) {
 			System.out.printf("Terreno grande. A área é de: " + area + " metros quadrados." , area);
 		}
+		
+		ler.close();
 
 	}
 

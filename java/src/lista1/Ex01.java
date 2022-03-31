@@ -24,6 +24,8 @@ public class Ex01 {
 			System.out.printf("A sua média foi de %.1f. Portanto, você está REPROVADO(A).", media);
 		}
 		
+		nota.close();
+		
 	}
 
 }

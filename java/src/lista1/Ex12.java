@@ -23,6 +23,8 @@ public class Ex12 {
 		} else {
 			System.out.printf("Terreno pequeno. A área é de " + area + " metros quadrados." , area);
 		}
+		
+		ler.close();
 
 	}
 

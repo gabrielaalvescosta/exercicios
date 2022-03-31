@@ -24,6 +24,8 @@ public class Ex14 {
 			System.out.printf("Seu imc é %1f. Portanto, você está fora do peso ideal", imc);
 		}
 		
+		ler.close();
+		
 	}
 
 }

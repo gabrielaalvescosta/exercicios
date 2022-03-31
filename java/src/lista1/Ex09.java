@@ -23,6 +23,9 @@ public class Ex09 {
 		} else {
 			System.out.printf("O número " + num2 + " é menor.", num2);
 		}
+		
+		ler.close();
+		
 	}
 
 }
