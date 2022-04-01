@@ -2,7 +2,7 @@ dias_uteis = 22
 salario = float(input('Salário: '))
 horas_trabalhadas = float(input('Horas extras trabalhadas: ')) # horas extras trabalhadas
 salario_por_hora = float(input('Salário por hora: '))
-hora_extra = (salario * 1.5) * horas_trabalhadas
+hora_extra = (salario * 0.5) * horas_trabalhadas
 
 if (horas_trabalhadas > 0):
    salario_final = salario + hora_extra
