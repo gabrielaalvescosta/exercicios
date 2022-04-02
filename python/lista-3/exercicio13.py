@@ -1,15 +1,25 @@
 dia = int(input('Digite o dia: '))
 mes = int(input('Digite o mês: '))
+ano = int(input('Digite um ano: '))
 
-meses = mes <= 12
-dias = dia <= 30
-trinta_dias = dia <= 31
+bissexto = False
 
-if dias and meses:
-    print('A data ' + str(dia) + '/' + str(mes) + ' é válido.')
-elif mes == 2 and dia <= 29:
-    print('A data ' + str(dia) + '/' + str(mes) + ' é válido.')
-elif mes == 1 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 11:
-    print('A data ' + str(dia) + '/' + str(mes) + ' é válido.')
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+    bissexto = True
+
+    if bissexto == True and mes == 2 and dia == 29:
+        print(str(dia) + '/' + str(mes) + '/' + str(ano) + ' é valido.')
+    else:
+        print('Esta data não é válida') 
+
+if dia > 0 or dia >= 31 or mes < 1 or mes > 12:
+    print(str(dia) + '/' + str(mes) + '/' + str(ano) + ' é valido.')
+
+elif mes == 2 and dia <= 28:
+    print(str(dia) + '/' + str(mes) + '/' + str(ano) + ' é valido.')
+
+elif mes == 1 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 11 and dia == 31:
+    print(str(dia) + '/' + str(mes) + '/' + str(ano) + ' é valido.')
+
 else:
-    print('A data ' + str(dia) + '/' + str(mes) + ' não é válido.')
+    print('Esta data não é válida') 
