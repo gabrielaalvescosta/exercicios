@@ -1,8 +1,10 @@
 import math
 
-numa = int(input('Digite o número A: '))
-numb = int(input('Digite o número B: '))
-numc = int(input('Digite o número C: '))
+numa = float(input('Digite o número A: '))
+numb = float(input('Digite o número B: '))
+numc = float(input('Digite o número C: '))
+
+# Verificando se é um número inteiro
 
 if numa != 0:
     delta = (numb*numb) - 4 * numa * numc
