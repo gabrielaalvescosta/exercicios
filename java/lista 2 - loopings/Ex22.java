@@ -2,8 +2,8 @@ package lista3;
 
 import java.util.Scanner;
 
-// Entrar com dois valores via teclado, onde o segundo dever· ser maior que o primeiro. 
-// Caso contr·rio solicitar novamente apenas o segundo valor.
+// Entrar com dois valores via teclado, onde o segundo dever√° ser maior que o primeiro. 
+// Caso contr√°rio solicitar novamente apenas o segundo valor.
 
 public class Ex22 {
 	
@@ -13,17 +13,18 @@ public class Ex22 {
 		
 		int valor1, valor2;
 		
+		System.out.printf("\n Digite o primeiro n√∫mero: ");
+		valor1 = ler.nextInt();
+		
 		do {
-			System.out.printf("\n Digite o primeiro n˙mero: ");
-			valor1 = ler.nextInt();
 			
-			System.out.printf("\n Digite o segundo n˙mero: ");
+			System.out.printf("\n Digite o segundo n√∫mero: ");
 			valor2 = ler.nextInt();
 		
 		} while(valor1 > valor2);
 		
 		if (valor2 > valor1) {
-			System.out.printf("O valor 2 È maior que o valor 1. A condiÁ„o j· foi atendida.");
+			System.out.printf("O valor 2 √© maior que o valor 1. A condi√ß√£o j√° foi atendida.");
 		}
 		
 
