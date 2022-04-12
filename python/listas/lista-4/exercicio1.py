@@ -13,7 +13,7 @@ S(n) = (a1 + an) * n / 2
 '''
 
 
-numero = int(input("Digite o valor de n: ")) # 11
+numero = int(input("Digite o valor de n: "))
 i = 0
 
 while numero <= i:

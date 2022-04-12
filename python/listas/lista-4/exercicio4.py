@@ -4,9 +4,6 @@ conta e imprime a quantidade de números positivos e a quantidade de números ne
 
 '''
 
-
-
-
 i = 0
 numero = int(input("Digite um numero inteiro positivo: "))
 
