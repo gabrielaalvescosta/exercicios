@@ -24,7 +24,12 @@ public class Ex36 {
 		String nome;
 		double preco;
 		double quantidade;
+		int idCategoria;
+		String nomeCategoria;
+		char resposta;
+		
 		Categoria categoria;
+		
 		
 		for (int i = 0; i <= 4; i++) {
 			
@@ -41,8 +46,47 @@ public class Ex36 {
 			System.out.printf("Digite o preco: ");
 			preco = ler.nextDouble();
 			produto.setPreco(preco);
+			
+			System.out.printf("Digite a quantidade: ");
+			quantidade = ler.nextDouble();
+			produto.setQuantidade(quantidade);
+			
+			System.out.printf("O produto tem categoria? S/N ");
+			resposta = ler.next().charAt(0);
+			
+			if (resposta == 's' || resposta == 'S') {
+				
+				categoria = new Categoria();
+				
+				System.out.printf("Digite o id da categoria: ");
+				idCategoria = ler.nextInt();
+				categoria.setId(idCategoria);
+				
+				
+				System.out.printf("Digite o nome da categoria: ");
+				nomeCategoria = ler.next();
+				categoria.setNome(nomeCategoria);
+				
+				
+				
+			} else {
+				
+				categoria = null;
+			}
+			
+
+			produto = new Produto(id, nome, preco, quantidade, categoria);
+			listaProdutos[i] = produto;
+			
 		}
 		
+        for (int i = 0; i <= 4; i++) {
+            System.out.printf("\nProduto %d criado com sucesso (%s)!", listaProdutos[i].getId(), listaProdutos[i].getNome());
+        }
+
+		
+		
+		ler.close();
 		
 	}
 

@@ -1,43 +1,44 @@
-package encapsulamento;
+package exercicio37;
 
 import java.util.Scanner;
+import java.io.IOException;
+import java.util.ArrayList;
+
 
 /*
- * Crie as classes conforme o Diagrama de Classe (UML) abaixo. 
+ * Crie um sistema com as classes conforme o Diagrama de Classe (UML) abaixo. 
  * Crie Getters e Setters para todos os atributos das classes. 
- * Crie um programa que utilize essas classes para cadastrar 5 clientes em uma lista de clientes e 
- * pergunte para cada cliente se ele tem ou não conta bancária. 
+ * Crie um programa que utilize essas classes para cadastrar 5 clientes em uma lista de clientes 
+ * e pergunte para cada cliente se ele tem ou não conta bancária. 
  * Caso o cliente tenha, permita ele cadastrar os dados da conta bancária. 
  * Ao final, exibir todos os clientes e suas respectivas contas bancárias, se houver.
  */
 
 
-public class Ex35 {
+public class Ex37 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		Scanner ler = new Scanner(System.in);
 		
-		Cliente[] listaCliente = new Cliente[5];
+		ArrayList<Cliente> listaClientes = new ArrayList<>();
 		
 		int id;
 		String nome;
 		int idade;
 		String email;
-		char resposta;
 		String agencia;
 		String numero;
 		double saldo;
-		Conta conta;
+		char resposta;
 
-		
-		for (int i = 0; i <= 4; i++) {
-		
+		for (int i = 0; i <= 4; i ++) {
+			
+			
 			Cliente cliente = new Cliente();
 			
-			System.out.printf("Digite o id: ");
-			id = ler.nextInt();
-			cliente.setId(id);
+	        id = listaClientes.size() + 1;
+	        cliente.setId(id);
 			
 			System.out.printf("Digite o nome: ");
 			nome = ler.next();
@@ -56,7 +57,7 @@ public class Ex35 {
 			
 			if (resposta == 'S' || resposta == 's') {
 				
-				conta = new Conta();
+				ContaBancaria conta = new ContaBancaria();
 				
 				System.out.printf("Digite a agencia: ");
 				agencia = ler.next();
@@ -70,35 +71,33 @@ public class Ex35 {
 				saldo = ler.nextDouble();
 				conta.setSaldo(saldo);
 				
+				cliente = new Cliente(id, nome, idade, email, conta);
 				
 			} else {
 				
-				conta = null;
+				cliente = new Cliente(id, nome, idade, email, null);
 				
 			}
 			
 			
-			cliente = new Cliente(id, nome, idade, email, conta);
-			
-			listaCliente[i] = cliente;
-			
 		}
-		
-		// exibir clientes
-		
-		for (int i = 0; i <= 4; i++) {
-			
-			
-			System.out.printf("\n Dados do cliente %d \n Nome: %s \n Idade: %d \n Saldo: %s", listaCliente[i].getId(), listaCliente[i].getNome(), listaCliente[i].getIdade(), listaCliente[i].getConta().getSaldo());
-			
-		}
-		
+
 		
 
+		
+		for (Cliente c: listaClientes) {
+			
+			if (c.getConta() != null) {
+				
+				System.out.printf("ID %d - Nome: %s  \n Dados bancarios %s - %s", c.getId(), c.getNome(), c.getConta().getAgencia());
+				
+			}
+			
+			
+		}
+		
 		ler.close();
 
 	}
-	
-	
 
 }

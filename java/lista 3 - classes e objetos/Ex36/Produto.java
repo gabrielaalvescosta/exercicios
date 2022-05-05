@@ -68,14 +68,14 @@ public class Produto {
 	
 	// metodos
 	
-	public String exibirNomeEpreco(String nome, double preco) {
-		return "Nome: %s \n Preco: %d";
+	public String exibirNomeEpreco() {
+		return "Nome: " + this.nome + "\n Preco: " + this.preco;
 				
 	}
 	
 	
-	public String exibirNomeEquantidade(String nome, double quantidade) {
-		return "Nome: %s \n Quantidade: %d";
+	public String exibirNomeEquantidade() {
+		return "Nome: " + this.nome + "\n Quantidade: " + this.quantidade;
 	}
 
 }
