@@ -64,5 +64,11 @@ public class Cliente {
 		this.conta = conta;
 	}
 	
+	// metodos
+	
+	public String getContaEagencia() {
+		return "Ag: " + this.conta.getAgencia() + "\nConta: " + this.conta.getNumero();
+	}
+	
 }
 

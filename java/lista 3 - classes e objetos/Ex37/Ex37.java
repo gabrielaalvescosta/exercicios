@@ -79,22 +79,27 @@ public class Ex37 {
 				
 			}
 			
-			
+			listaClientes.add(cliente);
 		}
-
 		
 
-		
-		for (Cliente c: listaClientes) {
 			
-			if (c.getConta() != null) {
+			for (Cliente c: listaClientes) {
 				
-				System.out.printf("ID %d - Nome: %s  \n Dados bancarios %s - %s", c.getId(), c.getNome(), c.getConta().getAgencia());
-				
+				if (c.getConta() != null) {
+
+					System.out.printf("ID %d - Nome: %s  \nDados bancarios: %s - %s", c.getId(), c.getNome(), c.getContaEagencia());	
+
+				} else {
+
+					System.out.printf("ID %d - Nome: %s  \nNão possui conta bancária", c.getId(), c.getNome());	
+
+					
+				}
+					
+
 			}
-			
-			
-		}
+
 		
 		ler.close();
 
