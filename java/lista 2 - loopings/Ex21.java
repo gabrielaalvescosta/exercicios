@@ -13,13 +13,23 @@ public class Ex21 {
 		int numero;
 		
 		do {
-			System.out.printf("\n Digite um n�mero positivo: ");
+			System.out.printf("\n Digite um número: ");
 			numero = ler.nextInt();
 		
 		} while(numero < 0);
 		
 		if(numero > 0) {
-			System.out.printf("\n O n�mero %d � positivo.", numero);
+			
+			System.out.printf("\n O número %d é positivo.", numero);
+			numero = ler.nextInt();
+			
+		} else if (numero == 0) {
+			
+			System.out.printf("\n O número %d é nulo.", numero);
+			numero = ler.nextInt();
+			
+		} else {
+			System.out.printf("\n O número %d é negativo.", numero);
 			numero = ler.nextInt();
 		}
 		
