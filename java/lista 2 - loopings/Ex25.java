@@ -2,9 +2,9 @@ package lista3;
 
 import java.util.Scanner;
 
-// Entrar via teclado com um valor qualquer. Travar a digitação, no sentido de aceitar somente valores 
+// Entrar via teclado com um valor qualquer. Travar a digitaï¿½ï¿½o, no sentido de aceitar somente valores 
 // positivos. 
-// Após a digitação, exibir a tabuada do valor solicitado, no intervalo de um a dez.
+// Apï¿½s a digitaï¿½ï¿½o, exibir a tabuada do valor solicitado, no intervalo de um a dez.
 
 public class Ex25 {
 	
@@ -31,6 +31,8 @@ public class Ex25 {
 				ler.close();
 			}
 			
+		} else {
+			System.out.prinft("Digite um valor positivo.");
 		}
 		
 

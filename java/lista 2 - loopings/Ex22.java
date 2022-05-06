@@ -24,7 +24,12 @@ public class Ex22 {
 		} while(valor1 > valor2);
 		
 		if (valor2 > valor1) {
+			
 			System.out.printf("O valor 2 é maior que o valor 1. A condição já foi atendida.");
+			
+		} else {
+			
+			System.out.printf("Condicao inválida. Tente novamente.");
 		}
 		
 

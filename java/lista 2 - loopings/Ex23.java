@@ -2,7 +2,7 @@ package lista3;
 
 import java.util.Scanner;
 
-// Entrar via teclado com o sexo de determinado usuário, aceitar somente “F” ou “M” como respostas válidas.
+// Entrar via teclado com o sexo de determinado usuï¿½rio, aceitar somente ï¿½Fï¿½ ou ï¿½Mï¿½ como respostas vï¿½lidas.
 
 public class Ex23 {
 
@@ -20,7 +20,11 @@ public class Ex23 {
 		} while (sexo != "F" || sexo != "M");
 		
 		if (sexo == "F" || sexo == "M") {
+			
 			System.out.printf("O sexo foi definido como %c", sexo);
+			
+		} else {
+			System.out.printf("Condicao invÃ¡lida, tente novamente. ");
 		}
 		
 		ler.close();
