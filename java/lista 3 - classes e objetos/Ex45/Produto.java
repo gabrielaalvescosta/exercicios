@@ -23,7 +23,7 @@ public class Produto {
 	public ItemComprado getItemComprado() {
 		return item;
 	}
-	public void setItemComprado(int item) {
+	public void setItemComprado(ItemComprado item) {
 		this.item = item;
 	}
 	
